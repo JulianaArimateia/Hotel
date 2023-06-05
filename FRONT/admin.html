@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/img/image_6483441-removebg-preview (1).ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Hotel</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img class="logo" src="assets/img/image_6483441-removebg-preview.ico" width="65" alt="Logotipo">
+      <a class="navbar-brand" href="">Hotel Girasol</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="busque aqui" id="filtra" aria-label="Search">
+          <button class="btn btn-warning" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <section class="container d-grid">
+    <div class="card">
+      <form class="row g-3" id="quartoForm">
+        <div class="col-md-6">
+          <label for="numero" class="form-label">Numero do Quarto:</label>
+          <input type="text" class="form-control" id="numeroInput" placeholder="Numero do quarto">
+        </div>
+        <div class="col-md-6">
+          <label for="valor" class="form-label">Valor:</label>
+          <input type="text" class="form-control" id="valorInput" placeholder="Valor do quarto">
+        </div>
+        <div class="col-md-6">
+          <label for="tipo" class="form-label">Tipo:</label>
+          <input type="text" class="form-control" id="tipoInput" placeholder="Categoria do quarto">
+        </div>
+        <div class="col-md-6" style="margin-top: 1.8%;">
+          <label for="inputDisponivel">Disponivel:</label>
+          <select id="disponivelInput" class="form-control">
+            <option selected value="">informe a disponibilidade</option>
+            <option value="1">Sim</option>
+            <option value="0">Não</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-warning" type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <br>
+  <section class="container d-flex flex-wrap">
+    <h1>Tabela dos quartos</h1>
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Numero</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Disponivel</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="quartosTable"></tbody>
+    </table>
+  </section>
+  <br>
+
+  <section class="container d-flex flex-wrap">
+    <h1>Tabela das reservas</h1>
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome do cliente</th>
+          <th scope="col">Numero do quarto</th>
+          <th scope="col">Check_in</th>
+          <th scope="col">Check_up</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </section>
+
+
+
+  <script src="assets/js/admin.js"></script>
+  <script src="assets/js/reservas.js"></script>
+</body>
+
+</html>
